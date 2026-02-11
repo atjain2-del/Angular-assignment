@@ -1,0 +1,84 @@
+/* --- Google Pay Inspired Theme --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary: #1a73e8;       /* Google Blue */
+  --primary-dark: #1557b0;
+  --secondary: #5f6368;     /* Grey Text */
+  --accent: #e8f0fe;        /* Light Blue Background */
+  --success: #1e8e3e;       /* Green */
+  --danger: #d93025;        /* Red */
+  
+  /* Surfaces */
+  --bg-body: #f8f9fa;       /* Light Grey Page Background */
+  --surface: #ffffff;       /* Cards */
+  --border: #dadce0;
+  
+  /* Spacing & Shapes */
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  --shadow-md: 0 4px 6px rgba(32,33,36,0.28);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-body);
+  color: #202124;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Global Buttons --- */
+button { cursor: pointer; transition: all 0.2s ease; border: none; font-family: inherit; }
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 24px; /* Pill shape like GPay */
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.btn-primary:hover { background-color: var(--primary-dark); box-shadow: var(--shadow-sm); }
+.btn-primary:disabled { background-color: var(--secondary); opacity: 0.5; cursor: not-allowed; }
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-weight: 500;
+}
+.btn-secondary:hover { background-color: var(--accent); border-color: var(--primary); }
+
+/* --- Forms --- */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 16px;
+  background: var(--surface);
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+input:focus { outline: none; border-color: var(--primary); border-width: 2px; padding: 11px 14px; }
+
+/* --- Cards --- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+/* --- Utilities --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.text-center { text-align: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
